@@ -1,45 +1,41 @@
-# The Minimal theme
+# The Minimal Academic CV theme
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimal.svg)](https://badge.fury.io/rb/jekyll-theme-minimal)
-
-*Minimal is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/minimal), or even [use it today](#usage).*
-
-![Thumbnail of Minimal](thumbnail.png)
+A CV website based on the Github-Pages Minimal theme
 
 ## Usage
 
-To use the Minimal theme:
+To use the Minimal Academic CV theme on GitHub Pages, add the following to your site's `_config.yml`:
 
-1. Add the following to your site's `_config.yml`:
-
-    ```yml
-    remote_theme: pages-themes/minimal@v0.2.0
-    plugins:
-    - jekyll-remote-theme # add this line to the plugins list if you already have one
-    ```
-
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
-
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
+```yml
+remote_theme: ngpaladi/minimal-academic-cv
+```
 
 ## Customizing
 
 ### Configuration variables
 
-Minimal will respect the following variables, if set in your site's `_config.yml`:
+Minimal Academic CV will respect the following variables, if set in your site's `_config.yml`:
 
 ```yml
-title: [The title of your site]
+author: [The author of the site]
 description: [A short description of your site's purpose]
+logo: [A headshot or personal logo file path]
 ```
 
 Additionally, you may choose to set the following optional variables:
 
 ```yml
-show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
 google_analytics: [Your Google Analytics tracking ID]
+cv: [A CV file path]
+google_scholar: [A link to a Google Scholar profile]
+github_username: [Your Github username]
+linkedin: [A link to a LinkedIn profile]
+twitter: [Link to a Twitter profile]
+mastodon: [Link to a Mastodon profile]
+instagram: [Link to an Instagram profile]
+threads: [Link to an Threads profile]
+facebook: [Link to a Facebook profile]
+Youtube: [Link to a Youtube channel]
 ```
 
 ### Stylesheet
@@ -72,26 +68,11 @@ If you'd like to change the theme's HTML layout:
 
 Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
 
-### Overriding GitHub-generated URLs
 
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
-
-1. Look at [the template source](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
-
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
-
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
 
 ## Roadmap
 
-See the [open issues](https://github.com/pages-themes/minimal/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/ngpaladi/minimal-academic-cv/issues) for a list of proposed features (and known issues).
 
 ## Project philosophy
 
@@ -105,7 +86,7 @@ Interested in contributing to Minimal? We'd love your help. Minimal is an open s
 
 If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/minimal`)
+1. Clone down the theme's repository (`git clone https://github.com/ngpaladi/minimal-academic-cv`)
 2. `cd` into the theme's directory
 3. Run `script/bootstrap` to install the necessary dependencies
 4. Run `bundle exec jekyll serve` to start the preview server
